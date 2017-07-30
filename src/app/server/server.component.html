@@ -1,0 +1,16 @@
+<!--<md-input-container>-->
+  <!--<input mdInput placeholder="Add New server" (input)="updateServer($event)">-->
+<!--</md-input-container>-->
+<md-input-container>
+  <input mdInput placeholder="Add New server" [(ngModel)]="serverName" (input)="allowServer($event)">
+</md-input-container>
+
+<!--<p>{{serverName}}</p>-->
+<div class="button-container">
+<button (click)="addServer()" md-button [disabled]="!allowNewServer">Add Servers</button>
+</div>
+<p>{{serverCreationStatus}}</p>
+<p>
+  The server with server ID {{serverId}} is {{serverStatus}}
+</p>
+
